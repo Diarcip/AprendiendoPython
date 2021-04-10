@@ -1,4 +1,4 @@
-Frase= input("Ingrese la frase a la cual quiere obtener la informacion de cuantas letras y palabras tiene: ")
+Frase= input("Ingrese la frase de la cual quiere obtener la informacion de cuantas letras y palabras tiene: ")
 
 #CONTAR LETRAS EN LA FRASE INGRESADA
 
@@ -40,5 +40,6 @@ def CantidadPalabras():
     return contPalabras
 
 #IMPRIMIR RESULTADO
-
-print("Hola, la frase '" +Frase+ "', contiene "+str(CantidadLetras())+" letras dentro de "+str(CantidadPalabras())+" palabras.")
+print("-----------------------------------------------------------------")
+print("Hola, el texto ingresado contiene "+str(CantidadLetras())+" letras dentro de "+str(CantidadPalabras())+" palabras.")
+print("-----------------------------------------------------------------")
