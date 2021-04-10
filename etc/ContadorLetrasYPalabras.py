@@ -1,5 +1,4 @@
-print("Cual es tu nombre?")
-Nombre= input()
+Nombre= input("Ingrese la frase a la cual quiere obtener la informacion de cuantas letras y palabras tiene: ")
 
 #CONTAR LETRAS EN LA FRASE INGRESADA
 
