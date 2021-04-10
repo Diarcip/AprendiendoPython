@@ -1,12 +1,12 @@
-Nombre= input("Ingrese la frase a la cual quiere obtener la informacion de cuantas letras y palabras tiene: ")
+Frase= input("Ingrese la frase a la cual quiere obtener la informacion de cuantas letras y palabras tiene: ")
 
 #CONTAR LETRAS EN LA FRASE INGRESADA
 
 def CantidadLetras():
     i = 0
     contLetras = 0
-    while i < len(Nombre):
-        Letra = Nombre[i]
+    while i < len(Frase):
+        Letra = Frase[i]
         if Letra == ' ':
             i += 1
         else:
@@ -18,20 +18,20 @@ def CantidadLetras():
 def CantidadPalabras():
     i = 0
     contPalabras = 0
-    while i < len(Nombre):
-        Letra = Nombre[i]
+    while i < len(Frase):
+        Letra = Frase[i]
         if Letra == ' ': #Valida si la letra es un espacio ' '
             if i == 0: #Valida si el espacio es el primer caracter
                 i += 1
                 contPalabras = 0
-            elif Nombre[i-1] == ' ':#Valida si el caracter anteriormente analizado fue un espacio
+            elif Frase[i-1] == ' ':#Valida si el caracter anteriormente analizado fue un espacio
                 i += 1
             else: #Si no hay dos o mas espacios consecutivos...
                 i += 1
                 contPalabras += 1
         else:
             i += 1
-    if Nombre[i-1] != ' ' and Nombre[i-1] == Nombre[-1]:
+    if Frase[i-1] != ' ' and Frase[i-1] == Frase[-1]:
         #Valida si la ultima letra no es espacio para incrementar en 1 el numero de palabras
         contPalabras += 1
     if contPalabras == 0 and CantidadLetras() > 0:
@@ -41,4 +41,4 @@ def CantidadPalabras():
 
 #IMPRIMIR RESULTADO
 
-print("Hola "+Nombre+", tu nombre tiene "+str(CantidadLetras())+" letras dentro de "+str(CantidadPalabras())+" palabras.")
+print("Hola, la frase '" +Frase+ "', contiene "+str(CantidadLetras())+" letras dentro de "+str(CantidadPalabras())+" palabras.")
